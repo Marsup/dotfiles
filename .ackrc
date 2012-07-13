@@ -1,0 +1,2 @@
+--type-add=json=.json
+--ignore-dir=node_modules
