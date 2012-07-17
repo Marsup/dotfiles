@@ -36,6 +36,8 @@
 	# Diff stuff 
 	in = "!git remote update -p; git log ..@{u}"
 	out = log @{u}..
+	din = "!git remote update -p; git log ..@{u} -p"
+	dout = log @{u}.. -p
         d = diff -b 
 	ds = "!git d --cached"
 
@@ -49,7 +51,6 @@
 	ri = rebase -i --autosquash
 	undo = reset --soft HEAD^
 	track = checkout -t 
-	switch = checkout -B
 
 	# Some tools
 	stats = "!git log --format='%C(bold blue)%aN%Creset <%C(yellow)%aE%Creset>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn"
