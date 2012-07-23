@@ -30,6 +30,8 @@ plugins=(git mercurial git-flow autojump history-substring-search)
 . ~/.npmcompletion
 . ~/.dotfiles-tools/nvm/nvm.sh
 
+alias root='cd `g root`'
+
 setopt printeightbit
 
 zstyle ':completion:*' accept-exact '*(N)'

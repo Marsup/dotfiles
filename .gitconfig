@@ -56,7 +56,7 @@
 	h = rev-list --max-count=1 HEAD
 	stats = "!git log --format='%C(bold blue)%aN%Creset <%C(yellow)%aE%Creset>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn"
 	gstats = "!git log --branches --format='%C(bold blue)%aN%Creset <%C(yellow)%aE%Creset>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn"
-	root = rev-parse --show-cdup
+	root = rev-parse --show-toplevel
 	pack = "!git archive HEAD --format=tar | gzip > ./`git h`.tar.gz"
 	ignore= "!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore"
 
