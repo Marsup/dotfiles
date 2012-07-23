@@ -24,10 +24,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git mercurial git-flow autojump history-substring-search)
 
-source /etc/profile
-source ~/.profile
-source $ZSH/oh-my-zsh.sh
-source ~/.npmcompletion
+. /etc/profile
+. ~/.profile
+. $ZSH/oh-my-zsh.sh
+. ~/.npmcompletion
+. ~/.dotfiles-tools/nvm/nvm.sh
 
 setopt printeightbit
 
