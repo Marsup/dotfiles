@@ -9,7 +9,6 @@
 	editor = vim
         excludesfile = ~/.gitignore
 	autocrlf = input
-	gitProxy = gitproxy
 
 [branch]
 	autosetuprebase = always
@@ -50,7 +49,8 @@
 	# Branch stuff
 	ri = rebase -i --autosquash
 	undo = reset --soft HEAD^
-	track = checkout -t 
+	track = checkout -t
+	rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
