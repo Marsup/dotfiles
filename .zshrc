@@ -31,7 +31,7 @@ plugins=(git mercurial git-flow autojump history-substring-search)
 . ~/.dotfiles-tools/nvm/nvm.sh
 
 alias root='cd `g root`'
-alias nv="curl -s -o - http://nodejs.org/dist/ | grep -oE 'v[0-9]\.[0-9]\.[0-9]' | sort -u"
+alias nv="curl -s -o - http://nodejs.org/dist/ | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u -V"
 
 setopt printeightbit
 
