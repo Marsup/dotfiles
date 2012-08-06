@@ -23,11 +23,11 @@
   s = stash
 
   # Commit stuff
-  ca = commit -a
+  ca = commit -av
   cf = commit --fixup=HEAD
   caf = commit -a --fixup=HEAD
-  cs = commit -e --squash=HEAD
-  cas = commit -ea --squash=HEAD
+  cs = commit -ev --squash=HEAD
+  cas = commit -eav --squash=HEAD
   amend = commit --amend
   ai = add -i
   unadd = rm -r --cached
