@@ -21,6 +21,7 @@
   co = checkout
   st = status
   s = stash
+  pull = pull --all
 
   # Commit stuff
   ca = commit -av
