@@ -33,6 +33,9 @@ plugins=(git mercurial git-flow autojump history-substring-search)
 alias root='cd `g root`'
 alias nv="curl -s -o - http://nodejs.org/dist/ | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u -V"
 
+# Add current folder node_modules binaries to the PATH
+PATH=$PATH:node_modules/.bin
+
 setopt printeightbit
 
 zstyle ':completion:*' accept-exact '*(N)'
