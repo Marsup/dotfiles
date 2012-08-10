@@ -1,3 +1,4 @@
 --type-add=json=.json
+--type-add=less=.less
 --ignore-dir=node_modules
 --smart-case
