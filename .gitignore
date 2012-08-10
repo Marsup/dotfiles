@@ -1,2 +1,40 @@
+# system
+.sudo_as_admin_successful
+.aptitude
+.cache
+.config
+.links2
+.elinks
+
+# bash
+.bash_history
+.bash_logout
+.bashrc
+
+# mongodb
+.dbshell
+
+# mysql
+.mysql_history
+
+# networking
+.netrc
+
+# node
 npm-debug.log
+.npm
+.node-gyp
+.forever
+
+# ruby
+.gem
+
+# vi
 .*.swp
+
+# zsh
+.zcompdump
+.zsh_history
+.zsh-update
+.zprofile
+
