@@ -5,6 +5,11 @@
 .config
 .links2
 .elinks
+.local
+.rnd
+.dirinfo
+.lesshst
+.ssh
 
 # bash
 .bash_history
@@ -31,10 +36,11 @@ npm-debug.log
 
 # vi
 .*.swp
+.viminfo
+.vim/.netrwhist
 
 # zsh
 .zcompdump
 .zsh_history
 .zsh-update
 .zprofile
-
