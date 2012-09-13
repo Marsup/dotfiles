@@ -1,0 +1,5 @@
+* text=auto
+
+*.jpg binary -delta
+*.png binary -delta
+*.gz  binary -delta

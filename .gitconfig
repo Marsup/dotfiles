@@ -8,6 +8,7 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
   autocrlf = input
 
 [branch]
