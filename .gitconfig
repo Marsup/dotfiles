@@ -70,3 +70,11 @@
 
 [help]
   autocorrect = 1
+[merge]
+	tool = kdiff3
+[mergetool]
+	prompt = false
+[mergetool "kdiff3"]
+	keepBackup = false
+[mergetool "meld"]
+	keepBackup = false
