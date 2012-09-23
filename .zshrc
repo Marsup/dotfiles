@@ -22,7 +22,7 @@ ZSH_THEME="juanghurtado"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial git-flow autojump history-substring-search)
+plugins=(git mercurial git-flow autojump history-substring-search ssh-agent)
 
 . /etc/profile
 . ~/.profile
