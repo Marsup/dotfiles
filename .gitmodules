@@ -1,5 +1,5 @@
-[submodule ".dotfiles-tools/nvm"]
-	path = .dotfiles-tools/nvm
+[submodule ".nvm"]
+	path = .nvm
 	url = git://github.com/creationix/nvm.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
