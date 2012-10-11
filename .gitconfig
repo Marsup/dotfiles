@@ -37,10 +37,12 @@
   # Diff stuff 
   in = "!git remote update -p; git log ..@{u}"
   out = log @{u}..
-  din = "!git remote update -p; git log ..@{u} -p"
-  dout = log @{u}.. -p
+  din = "!git remote update -p; git d ..@{u} -p"
+  dout = diff -b @{u}..
+  dpin = "!git remote update -p; git log ..@{u} -p"
+  dpout = log @{u}.. -p
   d = diff -b 
-  ds = "!git d --cached"
+  ds = diff -b --cached
 
   # Tree navigation
   glog = log --oneline --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -74,7 +76,4 @@
 	tool = kdiff3
 [mergetool]
 	prompt = false
-[mergetool "kdiff3"]
-	keepBackup = false
-[mergetool "meld"]
 	keepBackup = false
