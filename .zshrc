@@ -22,16 +22,14 @@ ZSH_THEME="juanghurtado"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial git-flow autojump history-substring-search ssh-agent)
+plugins=(git mercurial git-flow autojump history-substring-search ssh-agent heroku)
 
 . /etc/profile
 . ~/.profile
 . $ZSH/oh-my-zsh.sh
 . ~/.npmcompletion
 . ~/.nvm/nvm.sh
-
-alias root='cd `g root`'
-alias nv="curl -s -o - http://nodejs.org/dist/ | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u -V"
+. ~/.aliases
 
 # Add current folder node_modules binaries to the PATH
 PATH=$PATH:node_modules/.bin
