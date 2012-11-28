@@ -32,7 +32,7 @@ plugins=(git mercurial git-flow autojump history-substring-search ssh-agent hero
 . ~/.aliases
 
 # Add current folder node_modules binaries to the PATH
-PATH=$PATH:node_modules/.bin
+PATH=$PATH:node_modules/.bin:~/node_modules/.bin
 
 setopt printeightbit
 
