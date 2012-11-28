@@ -63,6 +63,7 @@
   root = rev-parse --show-toplevel
   pack = "!git archive HEAD --format=tar | gzip > ./`git h`.tar.gz"
   ignore= "!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore"
+  su = submodule foreach git pull
 
 [push]
   default = tracking
