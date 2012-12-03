@@ -1,0 +1,10 @@
+{
+  "name": "dotfiles-packages",
+  "version": "0.0.0",
+  "dependencies": {
+    "leaky": "~0.1.3",
+    "unused": "~0.2.0",
+    "yeoman": "~0.9.5",
+    "npmedge": "~0.1.1"
+  }
+}
