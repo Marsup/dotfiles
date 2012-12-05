@@ -4,3 +4,4 @@ alias gr='cd `g root`'
 # Nicer cat for code
 alias c='pygmentize -O style=monokai -f console256 -g'
 
+function s() { grep -R -i $@ . }
