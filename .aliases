@@ -6,7 +6,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
-  local flags='-R'
+  local flags='-R -n'
 
   # Add smart-case feature (ack inspired)
   if [[ ($@ != $@:u) && ! ($@ =~ $mixedCase) ]]; then
