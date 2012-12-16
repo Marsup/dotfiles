@@ -35,12 +35,16 @@
   unadd = rm -r --cached
 
   # Diff stuff 
-  in = "!git remote update -p; git log ..@{u}"
+  in = "!git rup; git log ..@{u}"
   out = log @{u}..
-  din = "!git remote update -p; git d ..@{u} -p"
+  din = "!git rup; git d ..@{u} -p"
   dout = diff -b @{u}..
-  dpin = "!git remote update -p; git log ..@{u} -p"
+  dpin = "!git rup; git log ..@{u} -p"
   dpout = log @{u}.. -p
+  lin = "!git rup; git log ..@{u} --oneline"
+  lout =log @{u}.. --oneline
+  slin = "!git submodule foreach git lin"
+  slout = "!git submodule foreach git lout"
   d = diff -b 
   ds = diff -b --cached
 
@@ -52,6 +56,7 @@
 
   # Branch stuff
   ri = rebase -i --autosquash
+  rup = remote update -p
   undo = reset --soft HEAD^
   track = checkout -t
   rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
