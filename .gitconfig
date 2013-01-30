@@ -20,7 +20,7 @@
   # Simple aliases
   c = commit
   co = checkout
-  st = status
+  st = status -sb
   s = stash
   pull = pull --all
 
