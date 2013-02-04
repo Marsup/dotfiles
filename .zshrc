@@ -36,6 +36,7 @@ PATH=$PATH:node_modules/.bin:~/node_modules/.bin
 GREP_OPTIONS="-I --exclude-from=${HOME}/.grep-exclude --exclude-dir=.git --exclude-dir=.svn --exclude-dir=node_modules ${GREP_OPTIONS}"
 
 setopt printeightbit
+unsetopt correctall
 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
