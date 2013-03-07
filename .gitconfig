@@ -69,6 +69,7 @@
   pack = "!git archive HEAD --format=tar | gzip > ./`git h`.tar.gz"
   ignore= "!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore"
   su = submodule foreach git pull
+  serve = "!git daemon --reuseaddr --verbose --base-path=. --export-all ./.git"
 
 [push]
   default = tracking
