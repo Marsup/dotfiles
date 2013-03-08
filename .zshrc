@@ -29,6 +29,7 @@ plugins=(gitfast mercurial git-flow autojump history-substring-search ssh-agent 
 . $ZSH/oh-my-zsh.sh
 . ~/.npmcompletion
 . ~/.nvm/nvm.sh
+. ~/.nvm/bash_completion
 . ~/.aliases
 
 # Add current folder node_modules binaries to the PATH
