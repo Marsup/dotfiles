@@ -35,6 +35,7 @@ plugins=(gitfast mercurial git-flow autojump history-substring-search ssh-agent 
 # Add current folder node_modules binaries to the PATH
 PATH=$PATH:node_modules/.bin:~/node_modules/.bin
 GREP_OPTIONS="-I --exclude-from=${HOME}/.grep-exclude --exclude-dir=.git --exclude-dir=.svn --exclude-dir=node_modules ${GREP_OPTIONS}"
+LESS="$LESS -RFX"
 
 setopt printeightbit
 unsetopt correctall
