@@ -70,6 +70,7 @@
   ignore= "!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore"
   su = submodule foreach git pull
   serve = "!git daemon --reuseaddr --verbose --base-path=. --export-all ./.git"
+  wserve = "!git daemon --reuseaddr --verbose --enable=receive-pack --base-path=. --export-all ./.git"
 
 [push]
   default = tracking
