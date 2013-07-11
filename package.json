@@ -6,9 +6,13 @@
     "unused": "~0.2.0",
     "yeoman": "~0.9.5",
     "npmedge": "~0.1.1",
-    "serve": "~1.1.0",
-    "uglify-js": "~2.2.2",
-    "bower": "~0.6.8",
-    "grunt-cli": "~0.1.6"
+    "serve": "~1.3.0",
+    "uglify-js": "~2.3.6",
+    "bower": "~0.10.0",
+    "grunt-cli": "~0.1.6",
+    "dr-markdown": "~0.1.1",
+    "node-theseus": "~0.1.0",
+    "madge": "~0.1.4",
+    "fixmyjs": "~0.7.3"
   }
 }

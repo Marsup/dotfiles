@@ -34,7 +34,7 @@
   ai = add -i
   unadd = rm -r --cached
 
-  # Diff stuff 
+  # Diff stuff
   in = "!git rup; git log ..@{u}"
   out = log @{u}..
   din = "!git rup; git d ..@{u} -p"
@@ -45,7 +45,7 @@
   lout =log @{u}.. --oneline
   slin = "!git submodule foreach git lin"
   slout = "!git submodule foreach git lout"
-  d = diff -b 
+  d = diff -b
   ds = diff -b --cached
 
   # Tree navigation
@@ -83,3 +83,5 @@
 [mergetool]
   prompt = false
   keepBackup = false
+[diff]
+	algorithm = patience
