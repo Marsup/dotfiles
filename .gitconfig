@@ -71,6 +71,7 @@
   su = submodule foreach git pull
   serve = "!git daemon --reuseaddr --verbose --base-path=. --export-all ./.git"
   wserve = "!git daemon --reuseaddr --verbose --enable=receive-pack --base-path=. --export-all ./.git"
+  ignored = ls-files --others -i --exclude-standard
 
 [push]
   default = tracking
@@ -85,3 +86,4 @@
   keepBackup = false
 [diff]
 	algorithm = patience
+	renames = copies
