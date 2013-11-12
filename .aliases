@@ -7,6 +7,8 @@ alias sudo='sudo '
 # Nicer cat for code
 alias c='pygmentize -O style=monokai -f console256 -g'
 
+alias b='bower'
+
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
   local flags='-R -n'
