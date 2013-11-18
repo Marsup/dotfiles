@@ -10,11 +10,23 @@
 .dirinfo
 .lesshst
 .ssh
+.kde
+.openshift
+.heroku
+.w3m
+.Xauthority
+.dbus
+.fontconfig
+.pulse*
 
 # bash
 .bash_history
 .bash_logout
 .bashrc
+
+# git
+.cola
+.gitk
 
 # mongodb
 .dbshell
@@ -33,6 +45,14 @@ npm-debug.log
 .node-gyp
 .forever
 .pm2
+.yeoman
+node_modules
+
+# psql
+.psql_history
+
+# python
+.pip
 
 # ruby
 .gem
@@ -43,7 +63,8 @@ npm-debug.log
 .vim/.netrwhist
 
 # zsh
-.zcompdump
+.zcompdump*
 .zsh_history
 .zsh-update
 .fasd.data
+.zhistory
