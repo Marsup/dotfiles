@@ -18,6 +18,7 @@
 
 # mongodb
 .dbshell
+.mongorc.js
 
 # mysql
 .mysql_history
@@ -27,9 +28,11 @@
 
 # node
 npm-debug.log
+.npmrc
 .npm
 .node-gyp
 .forever
+.pm2
 
 # ruby
 .gem
@@ -43,3 +46,4 @@ npm-debug.log
 .zcompdump
 .zsh_history
 .zsh-update
+.fasd.data
