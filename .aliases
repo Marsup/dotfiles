@@ -19,3 +19,7 @@ function s() {
   fi
   echo $flags -e "\"$@\"" . | xargs grep
 }
+
+function dtunnel() {
+  ssh -t -L "$3":localhost:"$3" "$1" "ssh -L ${3}:localhost:${3} $2"
+}
