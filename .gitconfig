@@ -85,5 +85,7 @@
   prompt = false
   keepBackup = false
 [diff]
-	algorithm = patience
-	renames = copies
+  algorithm = patience
+  renames = copies
+
+
