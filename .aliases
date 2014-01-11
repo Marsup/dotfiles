@@ -2,7 +2,8 @@
 alias gr='cd `g root`'
 
 # Weird trick to make sudo keep aliases (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
-alias sudo='sudo '
+# Works fine, but then aliases like cp='nocorrect cp' won't work anymore, will re-enable when I find a workaround.
+# alias sudo='sudo '
 
 # Nicer cat for code
 alias c='pygmentize -O style=monokai -f console256 -g'
