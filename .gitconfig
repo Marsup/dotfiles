@@ -81,11 +81,21 @@
 
 [merge]
   tool = kdiff3
+
 [mergetool]
   prompt = false
   keepBackup = false
+  keepTemporaries = false
+
 [diff]
   algorithm = patience
   renames = copies
+  mnemonicPrefix = true
+  wordRegex = .
 
+[fetch]
+  recurseSubmodules = true
+
+[status]
+  submoduleSummary = true
 
