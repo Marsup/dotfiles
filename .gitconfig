@@ -38,18 +38,18 @@
   in = "!git rup; git log ..@{u}"
   out = log @{u}..
   din = "!git rup; git d ..@{u} -p"
-  dout = diff -b @{u}..
+  dout = diff -w @{u}..
   dpin = "!git rup; git log ..@{u} -p"
   dpout = log @{u}.. -p
   lin = "!git rup; git log ..@{u} --oneline"
   lout =log @{u}.. --oneline
   slin = "!git submodule foreach git lin"
   slout = "!git submodule foreach git lout"
-  d = diff -b
-  ds = diff -b --cached
+  d = diff -w
+  ds = diff -w --cached
 
   # Tree navigation
-  glog = log --oneline --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  glog = log --oneline --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr - %cD) %C(bold blue)<%an>%Creset'
   glogg = "!git glog --branches --remotes"
   glogs = "!git glog --stat"
   gloggs = "!git glogg --stat"
