@@ -10,6 +10,8 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 alias b='bower'
 
+alias gt='gulp --tasks-simple'
+
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
   local flags='-R -n'
