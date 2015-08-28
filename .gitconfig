@@ -75,6 +75,7 @@
 
 [push]
 	default = tracking
+	followTags = true
 
 [rerere]
 	enabled = 1
