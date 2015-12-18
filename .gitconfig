@@ -59,6 +59,7 @@
 	undo = reset --soft HEAD^
 	track = checkout -t
 	rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
+	trim = "!git branch -vv | grep gone | tr -s ' ' | cut -d' ' -f2 | xargs -n 1 git branch -d"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
