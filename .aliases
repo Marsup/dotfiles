@@ -14,6 +14,8 @@ alias gt='gulp --tasks-simple'
 
 alias git='LANG=en_US git'
 
+alias npp='tar -tf $(npm pack) && rm *.tgz'
+
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
   local flags='-R -n'

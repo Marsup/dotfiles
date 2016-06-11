@@ -22,7 +22,7 @@
 	c = commit
 	co = checkout
 	st = status -sb
-	pull = pull --all
+	p = pull --all --prune
 
 	# Commit stuff
 	ca = commit -av
@@ -106,3 +106,5 @@
 	helper = cache --timeout=14400
 [rebase]
 	autostash = true
+[receive]
+	fsckObjects = true
