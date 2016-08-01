@@ -60,7 +60,10 @@
 	undo = reset --soft HEAD^
 	track = checkout -t
 	rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
-	trim = "!git branch -vv | grep gone | tr -s ' ' | cut -d' ' -f2 | xargs -n 1 git branch -d"
+	trim = "!git branch -vv | grep gone | tr -s ' ' | cut -d' ' -f2 | xargs --no-run-if-empty -n 1 git branch -d"
+	brune = "!git branch --merged origin/master | grep -v 'master$' | xargs --no-run-if-empty git branch -d"
+	rbrune = "!git branch -r --merged origin/master | grep -v 'master$' | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
+	drbrune = "!git branch -r --merged origin/master | grep -v 'master$' | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
@@ -91,10 +94,10 @@
 	keepTemporaries = false
 
 [diff]
-	algorithm = patience
 	renames = copies
 	mnemonicPrefix = true
 	wordRegex = .
+	compactionHeuristic = true
 
 [fetch]
 	recurseSubmodules = true
@@ -108,3 +111,5 @@
 	autostash = true
 [receive]
 	fsckObjects = true
+[i18n]
+	logOutputEncoding = UTF-8
