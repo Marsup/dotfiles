@@ -6,7 +6,9 @@
     "madge": "^0.3.1",
     "node-inspector": "~0.7.0-2",
     "nodemon": "^1.2.1",
+    "np": "^2.4.0",
     "serve": "^1.4.0",
+    "speed-test": "^1.7.0",
     "ucss": "~0.4.3-beta",
     "ungit": "^0.10.1"
   }
