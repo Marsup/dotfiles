@@ -12,9 +12,12 @@ alias b='bower'
 
 alias gt='gulp --tasks-simple'
 
-alias git='LANG=en_US git'
+alias git='LANG=en_US.UTF-8 git'
 
 alias npp='tar -tf $(npm pack) && rm *.tgz'
+
+alias g='git'
+alias gg='git glogg'
 
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
