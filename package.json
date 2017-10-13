@@ -2,14 +2,17 @@
   "name": "dotfiles-packages",
   "version": "0.0.0",
   "dependencies": {
-    "gulp-autocompletion-zsh": "^0.1.1",
-    "madge": "^0.3.1",
-    "node-inspector": "~0.7.0-2",
-    "nodemon": "^1.2.1",
-    "np": "^2.4.0",
-    "serve": "^1.4.0",
-    "speed-test": "^1.7.0",
-    "ucss": "~0.4.3-beta",
-    "ungit": "^0.10.1"
+    "gulp-autocompletion-zsh": "0.x.x",
+    "heroku-cli": "^6.12.8",
+    "hil": "1.x.x",
+    "madge": "^1.6.0",
+    "nodemon": "1.x.x",
+    "npx": "^9.0.7",
+    "offline-issues": "^1.0.0",
+    "prettier": "^1.4.1",
+    "serve": "^6.0.6",
+    "speed-test": "1.x.x",
+    "travis-watch": "^1.17.1",
+    "ungit": "^1.1.19"
   }
 }

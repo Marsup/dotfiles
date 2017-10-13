@@ -15,9 +15,18 @@ alias gt='gulp --tasks-simple'
 alias git='LANG=en_US.UTF-8 git'
 
 alias npp='tar -tf $(npm pack) && rm *.tgz'
+alias nri='rm -rf ./node_modules package-lock.json && npm i'
+alias nrit='nri && npm t'
+alias nup='npm up'
 
 alias g='git'
 alias gg='git glogg'
+alias gcn='git clean -n'
+alias gcf='git clean -f'
+
+alias l='exa --group-directories-first'
+alias ll='l -lah'
+alias lt='ll --tree'
 
 function s() {
   local mixedCase="(([a-z].*[A-Z])|([A-Z].*[a-z]))"
@@ -33,3 +42,6 @@ function s() {
 function dtunnel() {
   ssh -t -L "$3":localhost:"$3" "$1" "ssh -L ${3}:localhost:${3} $2"
 }
+
+mkcd () { mkdir -p "$1" && cd "$1" }
+

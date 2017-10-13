@@ -23,6 +23,7 @@
 	co = checkout
 	st = status -sb
 	p = pull --all --prune
+	rh = reset --hard
 
 	# Commit stuff
 	ca = commit -av
@@ -33,6 +34,7 @@
 	amend = commit --amend
 	ai = add -i
 	unadd = rm -r --cached
+	rom = rebase origin/master
 
 	# Diff stuff
 	in = "!git rup; git log ..@{u}"
@@ -55,15 +57,17 @@
 	gloggs = "!git glogg --stat"
 
 	# Branch stuff
+	tracking-branch = rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	current-branch = rev-parse --abbrev-ref --symbolic-full-name HEAD
 	ri = rebase -i --autosquash
 	rup = remote update -p
 	undo = reset --soft HEAD^
 	track = checkout -t
 	rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
 	trim = "!git branch -vv | grep gone | tr -s ' ' | cut -d' ' -f2 | xargs --no-run-if-empty -n 1 git branch -d"
-	brune = "!git branch --merged origin/master | grep -v 'master$' | xargs --no-run-if-empty git branch -d"
-	rbrune = "!git branch -r --merged origin/master | grep -v 'master$' | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
-	drbrune = "!git branch -r --merged origin/master | grep -v 'master$' | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
+	brune = "!git branch --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | xargs --no-run-if-empty git branch -d"
+	rbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
+	drbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
@@ -87,6 +91,7 @@
 
 [merge]
 	tool = kdiff3
+	conflictstyle = diff3
 
 [mergetool]
 	prompt = false
@@ -97,7 +102,7 @@
 	renames = copies
 	mnemonicPrefix = true
 	wordRegex = .
-	compactionHeuristic = true
+	indentHeuristic = true
 
 [fetch]
 	recurseSubmodules = true
