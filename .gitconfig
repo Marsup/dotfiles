@@ -7,10 +7,13 @@
 	ui = auto
 
 [core]
-	editor = vim
+	editor = subl -w -a
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	autocrlf = input
+	askpass = /usr/bin/ksshaskpass
+	untrackedCache = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [branch]
 	autosetuprebase = always
@@ -23,7 +26,9 @@
 	co = checkout
 	st = status -sb
 	p = pull --all --prune
+	pb = "!git p && git brune"
 	rh = reset --hard
+	pf = push --force-with-lease
 
 	# Commit stuff
 	ca = commit -av
@@ -31,10 +36,13 @@
 	caf = commit -a --fixup=HEAD
 	cs = commit -ev --squash=HEAD
 	cas = commit -eav --squash=HEAD
+	can = commit -av --amend --no-edit
+	canv = commit -av --amend --no-edit --no-verify
 	amend = commit --amend
 	ai = add -i
 	unadd = rm -r --cached
 	rom = rebase origin/master
+	from = "!git fetch origin && git rom"
 
 	# Diff stuff
 	in = "!git rup; git log ..@{u}"
@@ -64,8 +72,8 @@
 	undo = reset --soft HEAD^
 	track = checkout -t
 	rebranch = "!f() { git branch \"$1\" HEAD && git reset --hard @{u} && git checkout \"$1\"; };f"
-	trim = "!git branch -vv | grep gone | tr -s ' ' | cut -d' ' -f2 | xargs --no-run-if-empty -n 1 git branch -d"
-	brune = "!git branch --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | xargs --no-run-if-empty git branch -d"
+	dbrune = "!LANGUAGE=en_US git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'"
+	brune = "!git dbrune | xargs --no-run-if-empty git branch -D"
 	rbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
 	drbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
 
@@ -103,6 +111,7 @@
 	mnemonicPrefix = true
 	wordRegex = .
 	indentHeuristic = true
+	colorMoved = default
 
 [fetch]
 	recurseSubmodules = true
@@ -118,3 +127,13 @@
 	fsckObjects = true
 [i18n]
 	logOutputEncoding = UTF-8
+[remote "origin"]
+	tagopt = --tags
+
+[sequence]
+	editor = interactive-rebase-tool
+[diff-so-fancy]
+	markEmptyLines = false
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

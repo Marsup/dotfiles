@@ -1,3 +1,5 @@
 *.jpg binary -delta
 *.png binary -delta
 *.gz  binary -delta
+npm-shrinkwrap.json merge=npm-merge-driver
+package-lock.json merge=npm-merge-driver

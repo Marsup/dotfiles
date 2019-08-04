@@ -17,6 +17,8 @@ alias git='LANG=en_US.UTF-8 git'
 alias npp='tar -tf $(npm pack) && rm *.tgz'
 alias nri='rm -rf ./node_modules package-lock.json && npm i'
 alias nrit='nri && npm t'
+alias lri='npm ci'
+alias lrit='lri && npm t'
 alias nup='npm up'
 
 alias g='git'
@@ -24,7 +26,7 @@ alias gg='git glogg'
 alias gcn='git clean -n'
 alias gcf='git clean -f'
 
-alias l='exa --group-directories-first'
+alias l='exa --group-directories-first --time-style long-iso --icons'
 alias ll='l -lah'
 alias lt='ll --tree'
 

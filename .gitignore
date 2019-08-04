@@ -67,3 +67,6 @@ node_modules
 .zsh-update
 .fasd.data
 .zhistory
+
+# All untracked files
+/*

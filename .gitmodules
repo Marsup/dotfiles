@@ -1,9 +1,6 @@
 [submodule ".nvm"]
 	path = .nvm
 	url = git@github.com:creationix/nvm.git 
-[submodule ".mongo-hacker"]
-	path = .mongo-hacker
-	url = git@github.com:TylerBrock/mongo-hacker.git 
 [submodule ".zprezto"]
 	path = .zprezto
 	url = git@github.com:Marsup/prezto.git
