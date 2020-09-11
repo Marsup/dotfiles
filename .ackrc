@@ -1,5 +1,0 @@
---type-add=json=.json
---type-add=less=.less
---type-add=pgsql=.pgsql
---ignore-dir=node_modules
---smart-case
