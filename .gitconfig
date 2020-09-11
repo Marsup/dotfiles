@@ -27,6 +27,7 @@
 	st = status -sb
 	p = pull --all --prune
 	pb = "!git p && git brune"
+	fb = "!git fetch --all --prune && git brune"
 	rh = reset --hard
 	pf = push --force-with-lease
 
@@ -76,6 +77,7 @@
 	brune = "!git dbrune | xargs --no-run-if-empty git branch -D"
 	rbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
 	drbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
+	comp = "!git co master && git pb"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
@@ -93,9 +95,6 @@
 [push]
 	default = tracking
 	followTags = true
-
-[rerere]
-	enabled = 1
 
 [merge]
 	tool = kdiff3
@@ -137,3 +136,5 @@
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
+[feature]
+	manyFiles = true
