@@ -13,7 +13,7 @@
 	autocrlf = input
 	askpass = /usr/bin/ksshaskpass
 	untrackedCache = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta --line-numbers --syntax-theme zenburn
 
 [branch]
 	autosetuprebase = always
