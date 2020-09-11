@@ -1,9 +1,0 @@
-[submodule ".nvm"]
-	path = .nvm
-	url = git@github.com:creationix/nvm.git 
-[submodule ".zprezto"]
-	path = .zprezto
-	url = git@github.com:Marsup/prezto.git
-[submodule ".fasd"]
-	path = .fasd
-	url = git@github.com:clvv/fasd.git
