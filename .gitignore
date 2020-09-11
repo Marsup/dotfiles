@@ -61,6 +61,9 @@ node_modules
 .viminfo
 .vim/.netrwhist
 
+# webstorm
+.idea/
+
 # zsh
 .zcompdump*
 .zsh_history
@@ -68,5 +71,3 @@ node_modules
 .fasd.data
 .zhistory
 
-# All untracked files
-/*
