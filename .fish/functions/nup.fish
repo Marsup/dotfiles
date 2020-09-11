@@ -2,6 +2,6 @@ function nup
 	if test -f yarn.lock
 		yarn upgrade-interactive $argv;
 	else
-		npx npmc pick-updates $argv;
+		npm-check -u --skip-unused $argv;
 	end
 end
