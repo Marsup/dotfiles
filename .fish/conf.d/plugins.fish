@@ -1,14 +1,11 @@
-function plugins_list
-  echo jethrokuan/z
-  echo danhper/fish-ssh-agent
-  echo nickeb96/puffer-fish
-  echo james2doyle/omf-plugin-fnm
-end
+set -l plugins_list \
+  jethrokuan/z \
+  danhper/fish-ssh-agent \
+  nickeb96/puffer-fish \
+  james2doyle/omf-plugin-fnm
 
 function plugins_install --on-event plugins_install
-  for plugin in (plugins_list)
-    fisher install $plugin
-  end
+  fisher install (plugins_list)
 end
 
 function plugins_uninstall --on-event plugins_uninstall
