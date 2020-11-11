@@ -1,3 +1,3 @@
 set PATH ~/.fnm $PATH
-fnm env --multi | source
+fnm env | source
 
