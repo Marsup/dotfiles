@@ -1,3 +1,3 @@
 function ls --wraps l
-	l
+	l $argv
 end
