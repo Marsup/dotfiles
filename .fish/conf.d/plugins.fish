@@ -3,7 +3,8 @@ set -g plugins_list \
   danhper/fish-ssh-agent \
   nickeb96/puffer-fish \
   james2doyle/omf-plugin-fnm \
-  PatrickF1/fzf.fish
+  PatrickF1/fzf.fish \
+  evanlucas/fish-kubectl-completions
 
 function plugins_install --on-event plugins_install
   fisher install $plugins_list
