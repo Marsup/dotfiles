@@ -42,7 +42,7 @@
 	amend = commit --amend
 	ai = add -i
 	unadd = rm -r --cached
-	rom = rebase origin/master
+	rom = "!git rebase origin/$(git default-branch)"
 	from = "!git fetch origin && git rom"
 
 	# Diff stuff
@@ -68,6 +68,7 @@
 	# Branch stuff
 	tracking-branch = rev-parse --abbrev-ref --symbolic-full-name "@{u}"
 	current-branch = rev-parse --abbrev-ref --symbolic-full-name HEAD
+	default-branch = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 	ri = rebase -i --autosquash
 	rup = remote update -p
 	undo = reset --soft HEAD^
@@ -77,7 +78,7 @@
 	brune = "!git dbrune | xargs --no-run-if-empty git branch -D"
 	rbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify origin --delete"
 	drbrune = "!git branch -r --merged $(git tracking-branch) | sed -e s/\\\\*//g | grep -v \"$(git current-branch)$\" | awk -F/ '{print $2}' | xargs --no-run-if-empty git push --no-verify --dry-run origin --delete"
-	comp = "!git co master && git pb"
+	comp = "!git co $(git default-branch) && git pb"
 
 	# Some tools
 	h = rev-list --max-count=1 HEAD
