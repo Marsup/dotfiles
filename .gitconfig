@@ -98,13 +98,16 @@
 	followTags = true
 
 [merge]
-	tool = kdiff3
+	tool = meld
 	conflictstyle = diff3
 
 [mergetool]
 	prompt = false
 	keepBackup = false
 	keepTemporaries = false
+
+[mergetool "meld"]
+	cmd = meld --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED" --diff $BASE $LOCAL --diff $BASE $REMOTE
 
 [diff]
 	renames = copies
